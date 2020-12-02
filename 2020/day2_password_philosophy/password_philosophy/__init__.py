@@ -21,15 +21,10 @@ def password_is_valid(data):
 def real_toboggan_password_is_valid(data):
     # correct for 1 index position in password policy
     (pos1, pos2, letter, password) = data
-    pos = password.find(letter, pos1-1)
-    if pos+1 == pos1:
-        check = password.find(letter, pos2-1)
-        if check == -1 or check+1 != pos2:
-            return True
-    else:
-        pos = password.find(letter, pos2-1)
-        if pos+1 == pos2:
-            return True
+    if password[pos1-1] == letter and password[pos2-1] != letter:
+        return True
+    elif password[pos1-1] != letter and password[pos2-1] == letter:
+        return True
     return False
 
 
