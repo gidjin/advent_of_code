@@ -21,3 +21,9 @@ services:
     command: bash -c 'pytest && cat input/real.txt | ./toboggan_trajectory.py'
     depends_on:
       - python
+  2020day4:
+    image: gidjin/python:aoc2020
+    working_dir: /advent_of_code/2020/day4_passport_processing
+    command: bash -c 'pytest && cat input/real.txt | ./passport_processing.py'
+    depends_on:
+      - python
