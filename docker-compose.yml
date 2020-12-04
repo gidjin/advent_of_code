@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  python:
+    build: .
+    image: gidjin/python:aoc2020
+  2020day1:
+    image: gidjin/python:aoc2020
+    working_dir: /advent_of_code/2020/day1_report_repair
+    command: bash -c 'pytest && cat input/real.txt | ./report_repair.py'
+    depends_on:
+      - python
+  2020day2:
+    image: gidjin/python:aoc2020
+    working_dir: /advent_of_code/2020/day2_password_philosophy
+    command: bash -c 'pytest && cat input/real.txt | ./password_philosophy.py'
+    depends_on:
+      - python
+  2020day3:
+    image: gidjin/python:aoc2020
+    working_dir: /advent_of_code/2020/day3_toboggan_trajectory
+    command: bash -c 'pytest && cat input/real.txt | ./toboggan_trajectory.py'
+    depends_on:
+      - python
