@@ -42,10 +42,11 @@ def find_row(string, start=0, end=127, total=128):
         elif string[0] == "B":
             return int(end)
     elif len(string) > 1:
+        next_total = total/2
         if string[0] == "F":
-            return find_row(string[1:], start, end - total/2, total/2)
+            return find_row(string[1:], start, end - next_total, next_total)
         elif string[0] == "B":
-            return find_row(string[1:], start + total/2, end, total/2)
+            return find_row(string[1:], start + next_total, end, next_total)
 
 
 # 0 - 7
@@ -56,7 +57,8 @@ def find_col(string, start=0, end=7, total=8):
         elif string[0] == "R":
             return int(end)
     elif len(string) > 1:
+        next_total = total/2
         if string[0] == "L":
-            return find_col(string[1:], start, end - total/2, total/2)
+            return find_col(string[1:], start, end - next_total, next_total)
         elif string[0] == "R":
-            return find_col(string[1:], start + total/2, end, total/2)
+            return find_col(string[1:], start + next_total, end, next_total)
