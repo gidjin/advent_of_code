@@ -27,3 +27,9 @@ services:
     command: bash -c 'pytest && cat input/real.txt | ./passport_processing.py'
     depends_on:
       - python
+  2020day5:
+    image: gidjin/python:aoc2020
+    working_dir: /advent_of_code/2020/day5_binary_boarding
+    command: bash -c 'pytest && cat input/real.txt | ./binary_boarding.py'
+    depends_on:
+      - python
