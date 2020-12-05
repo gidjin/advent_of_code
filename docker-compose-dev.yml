@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  2020day1:
+    volumes:
+      - advent-of-code-sync:/advent_of_code/2020:nocopy #  nocopy is important
+  2020day2:
+    volumes:
+      - advent-of-code-sync:/advent_of_code/2020:nocopy #  nocopy is important
+  2020day3:
+    volumes:
+      - advent-of-code-sync:/advent_of_code/2020:nocopy #  nocopy is important
+  2020day4:
+    volumes:
+      - advent-of-code-sync:/advent_of_code/2020:nocopy #  nocopy is important
+  2020day5:
+    volumes:
+      - advent-of-code-sync:/advent_of_code/2020:nocopy #  nocopy is important
+
+volumes:
+  advent-of-code-sync:
+    external: true

@@ -1,0 +1,4 @@
+version: "2"
+syncs:
+  advent-of-code-sync:
+    src: './2020'
