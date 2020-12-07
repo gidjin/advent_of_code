@@ -39,3 +39,9 @@ services:
     command: bash -c 'pytest && cat input/real.txt | ./custom_customs.py'
     depends_on:
       - python
+  2020day7:
+    image: gidjin/python:aoc2020
+    working_dir: /advent_of_code/2020/day7_handy_haversacks
+    command: bash -c 'pytest && cat input/real.txt | ./handy_haversacks.py'
+    depends_on:
+      - python
