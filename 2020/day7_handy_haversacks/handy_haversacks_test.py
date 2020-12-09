@@ -16,6 +16,7 @@ def sample_data():
             "dotted black bags contain no other bags."
             ]
 
+
 @pytest.fixture
 def ridiculous_data():
     return [
