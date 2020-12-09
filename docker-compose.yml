@@ -51,3 +51,9 @@ services:
     command: bash -c 'pytest && cat input/real.txt | ./handheld_halting.py'
     depends_on:
       - python
+  2020day9:
+    image: gidjin/python:aoc2020
+    working_dir: /advent_of_code/2020/day9_encoding_error
+    command: bash -c 'pytest && cat input/real.txt | ./encoding_error.py'
+    depends_on:
+      - python
